@@ -1,45 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Refusal Engine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      color: #111111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .container {
-      max-width: 600px;
-      padding: 2rem;
-    }
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>The Best SEO & Digital Marketing Agency In Boston UK | Near2Me Digital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #050505;
+    --text: #ffffff;
+    --accent: #ff3333;
+    --font: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* CRT/Scanline Effect */
+body::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    z-index: 3;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+p {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 3rem auto;
+    display: block;
+    filter: grayscale(100%) contrast(150%);
+    border: 2px solid #fff;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Magnetic CTA Styling */
+a {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    background-color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--text);
+    transition: transform 0.1s ease-out, color 0.3s, background 0.3s;
+    position: relative;
+    cursor: pointer;
+    will-change: transform;
+}
+
+a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background-color: transparent;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+}
+
+</style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container">
     <h1>This site is designed to turn most people away.</h1>
     <p>
-      This is intentional.<br>
-      Scan the code below or continue anyway.
+        This is intentional.<br>
+        Scan the code below or continue anyway.
     </p>
 
-    <img src="qr.png" alt="QR Code" style="max-width:200px; margin:2rem auto; display:block;">
+    <!-- Placeholder QR for demonstration since local 'qr.png' is not available -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Refusal&color=000000&bgcolor=ffffff" alt="QR Code">
 
-    <p>
-      <a href="refusal.html">Continue without scanning →</a>
-    </p>
-  </div>
+    <a href="refusal.html" class="magnetic-btn">Continue without scanning →</a>
+</div>
+
+<script>
+    const btn = document.querySelector('.magnetic-btn');
+    
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        // Magnet strength
+        const strength = 0.4;
+        
+        btn.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+    });
+
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+    });
+</script>
+
 </body>
 </html>
