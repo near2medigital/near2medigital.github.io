@@ -27,6 +27,27 @@
       color: inherit;
       text-decoration: underline;
     }
+
+    /* --- ADDED CSS START --- */
+    .qr-link {
+      text-decoration: none;
+      display: inline-block; /* Ensures the link wraps tight to the image */
+    }
+    
+    .qr-image {
+      max-width: 200px; 
+      margin: 2rem auto; 
+      display: block; 
+      border: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .qr-image:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+    /* --- ADDED CSS END --- */
   </style>
 </head>
 <body>
@@ -34,11 +55,11 @@
     <h1>This site is designed to turn most people away.</h1>
     <p>
       This is intentional.<br>
-      Scan the code below or click the image.
+      Scan or Click the QR code.
     </p>
 
-    <a href="https://qr.near2medigital.co.uk/r" style="text-decoration: none;">
-      <img src="refusal-gateway.png" alt="Scan or click to continue" style="max-width:200px; margin:2rem auto; display:block; border: none;">
+    <a href="https://qr.near2medigital.co.uk/r" class="qr-link">
+      <img src="refusal-gateway.png" alt="Scan or click to continue" class="qr-image">
     </a>
 
   </div>
