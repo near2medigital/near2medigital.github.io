@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Direct bots to your new sitemap
+Sitemap: https://www.near2medigital.co.uk/sitemap.xml
