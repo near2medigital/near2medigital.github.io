@@ -17,92 +17,116 @@
 
   <!-- Basic styling: clean, fast, readable -->
   <style>
-    :root {
-      --bg: #0b0c10;
-      --panel: #11131a;
-      --text: #e8e8ea;
-      --muted: #b7b7bd;
-      --link: #9ad1ff;
-      --border: rgba(255,255,255,0.12);
-      --max: 880px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-    }
-    header {
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
-    }
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 28px 18px;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-    .links a {
-      margin-right: 12px;
-      text-decoration: none;
-      color: var(--link);
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-    }
-    .links a:hover { border-bottom-color: var(--link); }
-    main { padding: 26px 0 42px; }
-    h1 {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin: 12px 0 10px;
-    }
-    h2 {
-      font-size: 1.25rem;
-      margin-top: 28px;
-      border-top: 1px solid var(--border);
-      padding-top: 22px;
-    }
-    p, li { color: var(--text); }
-    .muted { color: var(--muted); }
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px 16px;
-      margin: 14px 0;
-    }
-    ul { padding-left: 20px; }
-    .cta {
-      background: rgba(154, 209, 255, 0.08);
-      border: 1px solid rgba(154, 209, 255, 0.25);
-      border-radius: 14px;
-      padding: 16px;
-      margin-top: 22px;
-    }
-    .cta a { color: var(--link); }
-    footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      padding: 22px 0;
-    }
-    code {
-      background: rgba(255,255,255,0.08);
-      padding: 2px 6px;
-      border-radius: 8px;
-    }
-  </style>
+  :root {
+    --bg: #ffffff;
+    --panel: #f6f7f9;
+    --text: #111111;
+    --muted: #555555;
+    --link: #005fcc;
+    --border: #e2e4e8;
+    --max: 880px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    background: #ffffff;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 28px 18px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  .links a {
+    margin-right: 12px;
+    text-decoration: none;
+    color: var(--link);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+
+  .links a:hover {
+    border-bottom-color: var(--link);
+  }
+
+  main {
+    padding: 26px 0 42px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin: 12px 0 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 32px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .cta {
+    background: #eef4ff;
+    border: 1px solid #d6e4ff;
+    border-radius: 6px;
+    padding: 18px;
+    margin-top: 28px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    padding: 22px 0;
+  }
+
+  code {
+    background: #f0f2f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+</style>
+
 
   <!-- Optional: lightweight structured data (no address assumptions) -->
   <script type="application/ld+json">
