@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV0LQGMPC6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GV0LQGMPC6');
+  </script>
 
-  gtag('config', 'G-GV0LQGMPC6');
-</script>
-<meta charset="UTF-8">
-
+  <meta charset="UTF-8">
   <link rel="canonical" href="https://www.near2medigital.co.uk/" />
   <title>Local SEO | Google Optimisation | Near2Me Digital | Boston UK</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Near2Me Digital. Local SEO Agency in Boston, Lincolnshire. For Google Business Profile Optimisation, Content Creation & Local SEO services, Call Now!">
+  
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,28 +37,28 @@
       text-decoration: underline;
     }
 
-    /* --- ADDED CSS START --- */
     .qr-link {
       text-decoration: none;
-      display: inline-block; /* Ensures the link wraps tight to the image */
+      display: inline-block;
     }
     
     .qr-image {
-  width: 100%;            /* Allow it to fill the container up to the max-width */
-  max-width: 350px;       /* Set this to your desired display size */
-  height: auto;           /* CRITICAL: This maintains the 1:1 aspect ratio */
-  margin: 2rem auto; 
-  display: block; 
-  border: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+      /* 2. Fixes Aspect Ratio & Layout Shift */
+      display: block;
+      width: 350px;       /* Fixed width for stability */
+      max-width: 100%;    /* Responsive for small screens */
+      height: auto;       /* Ensures 1:1 ratio is maintained */
+      aspect-ratio: 1 / 1; /* Explicitly forces square shape in modern browsers */
+      margin: 2rem auto; 
+      border: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
 
     .qr-image:hover {
       opacity: 0.8;
       cursor: pointer;
-      transform: scale(1.05); /* Slight zoom effect on hover */
+      transform: scale(1.05);
     }
-    /* --- ADDED CSS END --- */
   </style>
 </head>
 <body>
@@ -71,15 +71,13 @@
 
     <a href="https://qr.near2medigital.co.uk/r" class="qr-link">
       <img 
-  src="refusal-gateway.png" 
-  alt="Scan or click to continue" 
-  class="qr-image" 
-  width="700" 
-  height="700" 
-  fetchpriority="high"
->
+        src="refusal-gateway.png" 
+        alt="Scan or click to continue" 
+        class="qr-image" 
+        width="700" 
+        height="700" 
+        fetchpriority="high">
     </a>
-
   </div>
 </body>
 </html>
