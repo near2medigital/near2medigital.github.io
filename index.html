@@ -44,12 +44,14 @@
     }
     
     .qr-image {
-      max-width: 200px; 
-      margin: 2rem auto; 
-      display: block; 
-      border: none;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
+  width: 100%;            /* Allow it to fill the container up to the max-width */
+  max-width: 350px;       /* Set this to your desired display size */
+  height: auto;           /* CRITICAL: This maintains the 1:1 aspect ratio */
+  margin: 2rem auto; 
+  display: block; 
+  border: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
     .qr-image:hover {
       opacity: 0.8;
